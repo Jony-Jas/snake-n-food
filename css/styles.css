@@ -1,0 +1,178 @@
+body{
+    background-color: gainsboro;
+}
+.navbar-header {
+    float: left;
+    text-align: center;
+    width: 100%;
+    height: 90px;
+    margin-right: 0px !important; 
+    margin-left: 0px !important;
+    border-style: solid;
+    border-color: #727f90;
+    border-width: 5px;
+    position: relative;
+    bottom: 60px;
+}
+.navbar-default {
+  visibility: hidden;
+}
+.navbar-brand {
+	float:none;
+    font-size: 30px;
+    margin-right: 0px;
+    margin-top: 15px;
+
+}
+#brand {
+    color: #727f90;;
+    font-family: 'Press Start 2P', cursive;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #b6b2b2;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: rgb(255, 255, 255);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #4f4d4d;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #000000;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+    background-image: url(../img/night.png);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+    border-radius: 50%;
+    background-image: url(../img/light.png);
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: 2px;
+  }
+  /* .controls {
+      position: relative;
+      left:40%;
+      top: 70px;
+      font-family: 'Press Start 2P', cursive;
+  } */
+  .score {
+      color:#727f90 !important;
+      font-size:30px;
+      font-family: 'Press Start 2P', cursive;
+  }
+  #scoreboard {
+    position: relative;
+    right: 0px;
+    left: 250px;
+    bottom: 40px;
+  }
+.glyphicon {
+  bottom: 0px;
+  color: gold;
+  margin-right: 10px;
+  top: 0px;
+}
+canvas {
+  position: absolute;
+  bottom: 0px;
+  top: 450px;
+  /* left: 0px; */
+  /* right: 0px; */
+  margin-left: 0px;
+  margin-right: 0px;
+  left: 50%;
+  /* right: 50%; */
+  transform: translate(-50%, -50%);
+}
+.switch {
+  top: 130px;
+    margin-left: 0px;
+    margin-right: 0px;
+    left: 65%;
+    transform: translate(-50%, -50%);
+}
+#scoreboards {
+  position: absolute;
+    margin-left: 0px;
+    margin-right: 0px;
+    transform: translate(-50%, -50%);
+    left: 25%;
+    top: 210px;
+}
+
+#scoreboards2 {
+  position: absolute;
+  margin-left: 0px;
+  left: 65%;
+  margin-right: 0px;
+  transform: translate(-50%, -50%);
+  top: 190px;
+}
+#highscore {
+  left: 110%;
+  position: relative;
+  bottom: 40px;
+  width: 20px;
+}
+#restart {
+  position: absolute;
+    bottom: 0px;
+    top: 670px;
+    height: 26px;
+    left: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    right: 0px;
+}
+
+
+
+
+
+
+

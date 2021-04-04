@@ -1,0 +1,32 @@
+h1{
+	text-align: center;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/********** Large devices only(lg) **********/
+@media (min-width: 1200px) {
+}
+
+/********** Medium devices only(md) **********/
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+
+/********** Small devices only(sm) **********/
+@media (min-width: 768px) and (max-width: 991px) {
+}
+
+/********** Extra small devices only(xs) **********/
+@media (max-width: 767px) {
+}

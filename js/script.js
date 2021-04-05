@@ -1,23 +1,30 @@
-if(screen.width <= 767)
+if ("ontouchstart" in document.documentElement)
 {
-  window.open("mobile/index.html","_self");
+  window.open("index-m.html","_self");
 }
 var element = document.body;
+var footer = document.getElementById("footer")
 var checkbox = document.getElementById("myCheck");
 checkbox.addEventListener("change", function() {
 if(checkbox.checked)
 {
 console.log("Check");
 element.style.backgroundColor = "black";
+footer.style.backgroundColor = "black";
+footer.style.color = "white";
 }
 else
 {
   console.log("no Check");
   element.style.backgroundColor = "gainsboro";
+  footer.style.backgroundColor = "lightgrey";
+footer.style.color = "black";
 }
 });
-
-
+if(window.localStorage.getItem("high_score") == null)
+{
+window.localStorage.setItem("high_score", 0);
+}
 document.getElementById("highscore").innerHTML=window.localStorage.getItem("high_score");
 const board_border = 'red';
 const board_background = '#273445';
@@ -35,7 +42,22 @@ clear_board();
 document.getElementById("restart").addEventListener("click", game);
 
 function game () {
-  document.getElementById("restart").style.display = "none";
+
+  document.getElementById("scoreboard").innerHTML =0;
+  function disableScroll() {
+    // Get the current page scroll position
+    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+  
+        // if any scroll is attempted, set this to the previous value
+        window.onscroll = function() {
+            window.scrollTo(scrollLeft, scrollTop);
+        };
+}
+disableScroll();
+
+
+document.getElementById("restart").style.display = "none";
 document.getElementById("highscore").innerHTML=window.localStorage.getItem("high_score");
 
 
@@ -76,6 +98,7 @@ function main() {
     document.getElementById("highscore").innerHTML=window.localStorage.getItem("high_score");
     }
     if (has_game_ended()){
+        window.onscroll = function() {};
         document.getElementById("restart").style.display = "block";
         document.getElementById("restart").innerHTML = "Restart";
         return;
